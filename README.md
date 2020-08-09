@@ -12,3 +12,8 @@ If the init script results in errors, you can check the following:
 - verify that the container works, ie docker exec -ti certbot /bin/bash
 - return init script after the creation of dummy certificates and check if the website still works
 - check if .well-known/acme-challenge is accessible
+
+### Commands
+```
+docker-compose up --force-recreate -d nginx # reload configuration
+```
