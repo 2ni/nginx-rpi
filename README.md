@@ -15,8 +15,16 @@ If the init script results in errors, you can check the following:
 - check if .well-known/acme-challenge is accessible
 - verify that all certificates are generated in data/certbot/conf/live/
 - make nginx.conf work; make terminal; adapt config and test with nginx -t
+- re-add redirects, run make nginx
+- if certificate was not renewed (eg ip change):
+  - comment configs with 443 settings and redirects in nginx.conf
+  - run ./init-letsencrypt.sh (you might uncomment some domains in the script)
+  - uncomment changes above
+  - make nginx
 
 ### Commands
 ```
 docker-compose up --force-recreate -d nginx # reload configuration
+or
+make nginx
 ```
