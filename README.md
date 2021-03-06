@@ -17,6 +17,7 @@ If the init script results in errors, you can check the following:
 - make nginx.conf work; make terminal; adapt config and test with nginx -t
 - ensure ensure http://<domain>/.well-known/acme-challenge/ is working!
 - ensure domain is resolving correctly with a record in [unboundtest](https://unboundtest.com/)
+- ensure dnssec is setup for your domain
 - re-add redirects, run make nginx
 - if certificate was not renewed (eg ip change):
   - comment configs with 443 settings and redirects in nginx.conf
